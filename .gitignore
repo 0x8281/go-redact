@@ -1,0 +1,16 @@
+
+/bin/
+/vendor/
+/temp
+.idea/
+.vscode/
+*.swp
+*.swo
+.env
+*.env.local
+__debug_bin
+*.out
+*.tar
+.gocache/
+.gomodcache/
+.DS_Store
