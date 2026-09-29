@@ -57,7 +57,7 @@ Designed specifically as a privacy gateway for LLM pipelines and log sanitizatio
 We are actively developing `go-redact`. Planned features and ongoing tasks include:
 
 ### 1. Framework Integrations & Transport
-- [ ] **HTTP Middlewares**: Ready-to-use middleware packages for `net/http`, [Gin](https://github.com/gin-gonic/gin), and [Fiber](https://github.com/gofiber/fiber) to sanitize request bodies before business handlers execute.
+- [x] **HTTP Middlewares**: Ready-to-use middleware packages for `net/http`, [Gin](https://github.com/gin-gonic/gin), and [Fiber](https://github.com/gofiber/fiber) to sanitize request bodies before business handlers execute.
 - [ ] **Drop-in LLM Reverse Proxy (`cmd/proxy`)**: A standalone transparent proxy server compatible with OpenAI, Anthropic, and Ollama APIs that automatically masks incoming prompts and demasks outgoing SSE streams.
 - [ ] **gRPC Interceptor**: Client and server interceptors for automated field scrubbing in protobuf payloads.
 

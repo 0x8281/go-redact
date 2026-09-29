@@ -41,15 +41,16 @@ func ValidateSNILS(snils string) bool {
 	}
 
 	numPart := 0
-	for i := 0; i < 9; i++ {
+	for i := range 9 {
 		numPart = numPart*10 + digits[i]
 	}
+
 	if numPart <= 1001998 {
 		return true
 	}
 
 	sum := 0
-	for i := 0; i < 9; i++ {
+	for i := range 9 {
 		sum += digits[i] * (9 - i)
 	}
 
@@ -85,18 +86,23 @@ func ValidateINN(inn string) bool {
 	case 10:
 		weights := [...]int{2, 4, 10, 3, 5, 9, 4, 6, 8}
 		sum := 0
-		for i := 0; i < 9; i++ {
+
+		for i := range 9 {
 			sum += digits[i] * weights[i]
 		}
+
 		check := (sum % 11) % 10
+
 		return check == digits[9]
 
 	case 12:
 		weights11 := [...]int{7, 2, 4, 10, 3, 5, 9, 4, 6, 8}
 		sum11 := 0
-		for i := 0; i < 10; i++ {
+
+		for i := range 10 {
 			sum11 += digits[i] * weights11[i]
 		}
+
 		check11 := (sum11 % 11) % 10
 		if check11 != digits[10] {
 			return false
@@ -104,9 +110,11 @@ func ValidateINN(inn string) bool {
 
 		weights12 := [...]int{3, 7, 2, 4, 10, 3, 5, 9, 4, 6, 8}
 		sum12 := 0
-		for i := 0; i < 11; i++ {
+
+		for i := range 11 {
 			sum12 += digits[i] * weights12[i]
 		}
+
 		check12 := (sum12 % 11) % 10
 		return check12 == digits[11]
 
